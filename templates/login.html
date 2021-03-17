@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+  
+  {% block content %}
+  
+  <div class="w3-container w3-padding-64 w3-center" id="team">
+  <div class="wrapper">
+    
+    <form class="login" method="POST">{%csrf_token%}
+      {{form.errors}}
+      <p class="title">ingresar</p>
+        <input type="text" name="username" placeholder="USUARIO"/>
+        <i class="fa fa-user"></i>
+        <input type="password" name="password" placeholder="PASSWORD"/>
+        <i class="fa fa-key"></i>
+        <a href="/usuario/registro">Registrarse</a>
+        <input type="submit" name="" value="ENVIAR">
+      </p>
+    </form>
+  </div>
+  </div>
+  {% endblock content %}
